@@ -24,7 +24,7 @@
                 }
 
       // AC
-              function displayNewValue() {
+              function displayAcValue() {
                       document.getElementById("display").value = 0;
                     }
 
@@ -41,9 +41,14 @@
 
 
       // 0 values in display
-              function clearDisplay() {
+              function displayNewValue(value) {
+                console.log("Button value:", value);
+                document.getElementById("display").value = value;
+
+
+                }
               // Clear both the input and display
-              document.getElementById("display").value = "";}
+
 
 
 
@@ -97,13 +102,13 @@
     "
   >
     <div
-      class="container position-relative w-75 border border-success bg-light fs-3"
+      class="container position-relative w-50 h-75 border border-success bg-light fs-3"
     >
       <input
         id="display"
         type="text"
         class="display mt-2 w-100"
-        style="height: 120px; font-size: 55px; text-align: right"
+        style="height: 80px; font-size: 55px; text-align: right"
       />
 
       <div class="buttons">
@@ -112,7 +117,7 @@
             class="btn btn-danger shadow col-3"
             type="button"
             value="0"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="displayDelValue()"
           >
             DEL
@@ -121,7 +126,7 @@
             class="btn btn-info shadow col-3"
             type="button"
             value="0"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="displayValue('.')"
           >
             .
@@ -130,8 +135,8 @@
             class="btn btn-danger shadow col-3"
             type="button"
             value="0"
-            style="font-size: 50px; height: 120px"
-            onclick="displayNewValue()"
+            style="font-size: 50px; height: 80px"
+            onclick="displayAcValue()"
           >
             AC
           </button>
@@ -139,8 +144,8 @@
             class="btn btn-info shadow col-3"
             type="button"
             value="+"
-            style="font-size: 50px; height: 120px"
-            onclick="clearDisplay();calculateValue()"
+            style="font-size: 50px; height: 80px"
+            onclick="displayNewValue();calculateValue()"
           >
             +
           </button>
@@ -151,8 +156,8 @@
             class="btn btn-secondary shadow col-3"
             type="button"
             value="7"
-            style="font-size: 50px; height: 120px"
-            onclick="displayValue(7)"
+            style="font-size: 50px; height: 80px"
+            onclick="displayValue(7);displayNewValue(this.value);"
           >
             7
           </button>
@@ -160,7 +165,7 @@
             class="btn btn-secondary shadow col-3"
             type="button"
             value="8"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="displayValue(8)"
           >
             8
@@ -169,7 +174,7 @@
             class="btn btn-secondary shadow col-3"
             type="button"
             value="9"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="displayValue(9)"
           >
             9
@@ -178,7 +183,7 @@
             class="btn btn-info shadow col-3"
             type="button"
             value="-"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="clearDisplay();"
           >
             -
@@ -190,7 +195,7 @@
             class="btn btn-secondary shadow col-3"
             type="button"
             value="4"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="displayValue(4)"
           >
             4
@@ -199,7 +204,7 @@
             class="btn btn-secondary shadow col-3"
             type="button"
             value="5"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="displayValue(5)"
           >
             5
@@ -208,7 +213,7 @@
             class="btn btn-secondary shadow col-3"
             type="button"
             value="6"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="displayValue(6)"
           >
             6
@@ -217,7 +222,7 @@
             class="btn btn-info shadow col-3"
             type="button"
             value="*"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="clearDisplay()"
           >
             &times;
@@ -229,7 +234,7 @@
             class="btn btn-secondary shadow col-3"
             type="button"
             value="1"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="displayValue(1)"
           >
             1
@@ -238,7 +243,7 @@
             class="btn btn-secondary shadow col-3"
             type="button"
             value="2"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="displayValue(2)"
           >
             2
@@ -247,7 +252,7 @@
             class="btn btn-secondary shadow col-3"
             type="button"
             value="3"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="displayValue(3)"
           >
             3
@@ -256,7 +261,7 @@
             class="btn btn-info shadow col-3"
             type="button"
             value="/"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="clearDisplay()"
           >
             &divide;
@@ -268,7 +273,7 @@
             class="btn btn-secondary shadow col-3"
             type="button"
             value="0"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="displayValue(0)"
           >
             0
@@ -277,7 +282,7 @@
             class="btn btn-secondary shadow col-3"
             type="button"
             valu="00"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
             onclick="displayValue('00')"
           >
             00
@@ -286,7 +291,7 @@
             class="btn btn-secondary shadow col-6"
             type="button"
             valu="0"
-            style="font-size: 50px; height: 120px"
+            style="font-size: 50px; height: 80px"
           >
             =
           </button>
