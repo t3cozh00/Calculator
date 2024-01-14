@@ -53,16 +53,23 @@
 
 
       //calculate
-            function calculateValue(){
-              let currentValue = document.getElementById("display").value;
-              let splitValue = currentValue.split("");
+            function calculateValue(num1, num2, operator){
+              switch (operator){
+                case '+':
+                  return num1 + num2;
+                case '-':
+                  return num1 - num2;
+                case '*':
+                  return num1 * num2;
+                case '/':
+                  if ( num2!== 0 ){
+                    return num1 / num2;
+                } else {
+                  return "Invalid operator. Cannot divide by zero."
+                }
+              }
+
               console.log(splitValue);
-
-
-
-
-
-
             }
 
 
